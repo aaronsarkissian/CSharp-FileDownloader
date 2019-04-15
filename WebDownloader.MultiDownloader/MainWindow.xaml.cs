@@ -14,7 +14,7 @@ namespace WebDownloader.MultiDownloader
     public partial class MainWindow : Window
     {
         private string path = string.Empty;
-        DownloadManager downloader; // Remove this
+        //DownloadManager downloader; // Remove this
 
         public MainWindow()
         {
@@ -37,21 +37,10 @@ namespace WebDownloader.MultiDownloader
             var url = file_url.Text;
             var dirPath = path;
 
-            // TODO: check for some edge cases...
-
             DownloadManager downloader = new DownloadManager(url, dirPath, fileList);
             downloader.Start();
-            // Give each button an unique id, so you can cancel them later
-            //CancelButton.onclick = () =>
-            //{
-            //    downloader.CancelDownload;
-            //}
         }
 
         // Fix this - it only cancels the last item!
-        private void Cancel_button_Click(object sender, RoutedEventArgs e)
-        {
-            downloader.CancelDownload();
-        }
     }
 }

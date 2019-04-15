@@ -39,7 +39,7 @@
                         <GridViewColumn Header="Action" Width="100">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button Name="cancel_button" Content="Cancel" Click="Cancel_button_Click" />
+                                    <Button Name="cancel_button" Content="Cancel" />
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
